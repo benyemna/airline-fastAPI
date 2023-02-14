@@ -1,0 +1,13 @@
+fastapi
+secrets
+bson
+mongo_atlas_connection
+requests
+json
+pymongo
+time
+re
+bs4
+string
+urllib
+datetime
