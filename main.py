@@ -4,6 +4,7 @@ import secrets
 from bson.json_util import dumps
 from dst_airlines_functions import get_iata_one_city, get_token, create_search_dict_flight_offers, request_flight_offers
 from mongo_atlas_connection import *
+import uvicorn
 
 # definition API et sécurité
 api = FastAPI(title="API DST Airlines", description = "API pour interraction avec la BDD DST Airlines", version = "1.0.0",
@@ -189,3 +190,7 @@ def delete_route(departure_city, arrival_city, date, authorized: bool = Depends(
             status_code=401,
             detail="Incorrect admin username or password"
         )
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:api", host="0.0.0.0", port=8000, reload=False)

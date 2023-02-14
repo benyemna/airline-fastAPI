@@ -1,13 +1,5 @@
+pyOpenSSL
 fastapi
-secrets
-bson
-mongo_atlas_connection
+PyMongo
 requests
-json
-pymongo
-time
-re
-bs4
-string
-urllib
-datetime
+uvicorn
