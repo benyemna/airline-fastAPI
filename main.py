@@ -190,7 +190,3 @@ def delete_route(departure_city, arrival_city, date, authorized: bool = Depends(
             status_code=401,
             detail="Incorrect admin username or password"
         )
-
-
-if __name__ == "__main__":
-    uvicorn.run("main:api", host="0.0.0.0", port=8000, reload=False)
